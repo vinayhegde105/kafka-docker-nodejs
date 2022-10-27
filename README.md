@@ -15,12 +15,7 @@ A kafka producer/consumer proof of concept using node.
 * `git clone https://github.com/vinayhegde105/kafka-docker-nodejs.git`
 * `docker-compose up`
 * `open new terminal`
-* `docker exec -it kafka /opt/bitnami/kafka/bin/kafka-topics.sh \
-    --create
-    --bootstrap-server localhost:9092
-    --replication-factor 1
-    --partitions 1
-    --topic test`
+* `docker exec -it kafka /opt/bitnami/kafka/bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic test`
 * `sudo npm install -g npm`
 * `npm install` - installs npm dependencies.
 * `./scripts/start-kafka.sh` - starts kafka inside docker container.
