@@ -6,7 +6,7 @@ A kafka producer/consumer proof of concept using node.
 
 ## Prerequisites
 
-* `node`
+* `node` - Version > 12.x
 * `docker`
 * `docker-compose`
 
