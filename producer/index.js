@@ -13,10 +13,10 @@ stream.on('error', (err) => {
 });
 
 function queueRandomMessage() {
-  const category = getRandomAnimal();
-  const noise = getRandomNoise(category);
-  const event = { category, noise };
-  const success = stream.write(eventType.toBuffer(event));     
+  const company = getRandomAnimal();
+  const place = getRandomNoise(company);
+  const event = { company, place };
+  const success = stream.write(eventType.toBuffer(event));
   if (success) {
     console.log(`message queued (${JSON.stringify(event)})`);
   } else {
@@ -25,22 +25,17 @@ function queueRandomMessage() {
 }
 
 function getRandomAnimal() {
-  const categories = ['CAT', 'DOG'];
+  const categories = ['TEKSYSTEMS', 'INSIGHT'];
   return categories[Math.floor(Math.random() * categories.length)];
 }
 
 function getRandomNoise(animal) {
-  if (animal === 'CAT') {
-    const noises = ['meow', 'purr'];
+  if (animal === 'TEKSYSTEMS') {
+    const noises = ['BLR', 'HYD'];
     return noises[Math.floor(Math.random() * noises.length)];
-  } else if (animal === 'DOG') {
-    const noises = ['bark', 'woof'];
+  } else if (animal === 'INSIGHT') {
+    const noises = ['US', 'UK'];
     return noises[Math.floor(Math.random() * noises.length)];
   } else {
     return 'silence..';
   }
-}
-
-setInterval(() => {
-  queueRandomMessage();
-}, 3000);
