@@ -14,6 +14,7 @@ A kafka producer/consumer proof of concept using node.
 
 * `git clone https://github.com/vinayhegde105/kafka-docker-nodejs.git`
 * `docker-compose up`
+* `sudo npm install -g npm`
 * `npm install` - installs npm dependencies.
 * `./scripts/start-kafka.sh` - starts kafka inside docker container.
 * `./scripts/create-topic.sh` - creates kafka topic.
