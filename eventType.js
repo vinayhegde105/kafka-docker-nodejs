@@ -4,11 +4,11 @@ export default avro.Type.forSchema({
   type: 'record',
   fields: [
     {
-      name: 'category',
-      type: { type: 'enum', symbols: ['DOG', 'CAT'] }
+      name: 'company',
+      type: { type: 'enum', symbols: ['TEKSYSTEMS', 'INSIGHT'] }
     },
     {
-      name: 'noise',
+      name: 'place',
       type: 'string',
     }
   ]
