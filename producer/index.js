@@ -39,3 +39,8 @@ function getRandomNoise(animal) {
   } else {
     return 'silence..';
   }
+}
+
+setInterval(() => {
+  queueRandomMessage();
+}, 3000);
